@@ -72,7 +72,7 @@ PhoneDetail.innerHTML = ""
                   <p>Radio: <span>${brand.others.Radio}</span</p>
                   <p>USB: <span>${brand.others.USB}</span</p>
                   <p>WLAN: <span>${brand.others.WLAN}</span</p>
-                  <p>WLAN: <span>${brand.slug}</span</p>
+                  <p>Slug: <span>${brand.slug}</span</p>
                 </div>
               </div>
     `
