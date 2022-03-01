@@ -1,3 +1,4 @@
+// main even handeler add
 const searchPhone = ()=> {
     const showPhone = document.getElementById("show-phone")
     showPhone.innerHTML = ""
@@ -7,7 +8,6 @@ const searchPhone = ()=> {
     fetch(url)
     .then(res => res.json())
     .then(data => {
-      console.log(data)
       if(data.status == false){
           document.getElementById("error-massage").style.display = "block"
       }else{displayPhone(data.data.slice(0, 20))
@@ -19,9 +19,8 @@ const searchPhone = ()=> {
     const PhoneDetail = document.getElementById("phone-detail")
     PhoneDetail.innerHTML = ""
 }
-
+// phone display function
 const displayPhone = phones => {
-  console.log(phones)
     const showPhone = document.getElementById("show-phone")
     showPhone.innerHTML  = ""
     phones.forEach(phone => {
@@ -38,12 +37,9 @@ const displayPhone = phones => {
                   </div>
         `
         showPhone.appendChild(div)
-        
     });
-    
-
 }
-
+// phone detail function 
 const displayPhoneDetail = details =>{
    scrollTo(this)
 
@@ -52,11 +48,8 @@ const displayPhoneDetail = details =>{
     .then(res => res.json())
     .then(data => showPhoneDetail(data.data))
 }
-
 const showPhoneDetail = brand =>{
-  const showPhone = document.getElementById("show-phone")
-    // showPhone.innerHTML  = ""
-    console.log(brand)
+  console.log(brand)
     const PhoneDetail = document.getElementById("phone-detail")
 PhoneDetail.innerHTML = ""
     const div = document.createElement("div")
@@ -64,31 +57,24 @@ PhoneDetail.innerHTML = ""
     <div class="card phone-card" >
                 <img src="${brand.image}" class="phone-detail-images card-img-top w-25" alt="...">
                 <div class="card-body">
-                <p>releaseDate: <span>${brand.releaseDate ? brand.releaseDate: 'comming soon...'}</span</p>
-                  <p class="card-title">brand: <span>${brand.brand}</span</h4>
-                  <p class="card-title">phone name: <span>${brand.name}</span</h4>
-                  <p>displaySize: <span>${brand.mainFeatures.displaySize}</span</p>
-                  <p>memory: <span>${brand.mainFeatures.memory}</span</p>
-                  <p>storage: <span>${brand.mainFeatures.storage}</span</p>
-                  <h4>sensor</h4>
+                  <p class="card-title">Brand: <span>${brand.brand}</span</h4>
+                  <p class="card-title">Phone name: <span>${brand.name}</span</h4>
+                  <p>Release Date: <span>${brand.releaseDate ? brand.releaseDate: 'comming soon...'}</span</p>
+                  <p>Display Size: <span>${brand.mainFeatures.displaySize}</span</p>
+                  <p>Memory: <span>${brand.mainFeatures.memory}</span</p>
+                  <p>Storage: <span>${brand.mainFeatures.storage}</span</p>
+                  <h4>Sensors</h4>
                   <p><span>${brand.mainFeatures.sensors}</span</p>
-                  <h4>others</h4>
+                  <h4>Others</h4>
                   <p>Bluetooth: <span>${brand.others.Bluetooth}</span</p>
                   <p>GPS: <span>${brand.others.GPS}</span</p>
                   <p>NFC: <span>${brand.others.NFC}</span</p>
                   <p>Radio: <span>${brand.others.Radio}</span</p>
                   <p>USB: <span>${brand.others.USB}</span</p>
                   <p>WLAN: <span>${brand.others.WLAN}</span</p>
-
-                  
-
-                  
+                  <p>WLAN: <span>${brand.slug}</span</p>
                 </div>
               </div>
     `
     PhoneDetail.appendChild(div)
-    
-    // onclick="displayPhoneDetail('${phone.slug}')"
-
-
 }
