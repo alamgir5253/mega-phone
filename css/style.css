@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* google font  */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@600&display=swap');
+
+.site-title{
+    font-family: 'Noto Serif Display', serif;
+    border-radius: 50px;
+    background: #2c2c54;
+    color:#fff;
+}
+
+/* input and buton style  */
+.search-container{
+    margin:0 auto;
+    width: 50%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.search-field{
+padding: 10px;
+font-size: 18px;
+border: 2px solid rgb(2, 51, 51);
+border-right: none;
+border-top-left-radius: 20px;
+color: #fff;
+transition: .3s;
+}
+.search-field:focus{
+    outline: none;
+    background: #40407a;
+}
+.search-button{
+    padding: 10px 30px;
+    font-size: 18px;
+    border-left: none;
+    border: 2px solid rgb(2, 51, 51);
+    border-left: 0;
+    border-bottom-right-radius: 20px;
+    background: #40407a;
+    color: #fff;
+    transition: all .3s;
+}
+.search-button:hover{
+    background: #fff;
+    color: rgb(2, 51, 51);
+}
+
+/* error massage style  */
+#error-massage {
+  color: red;
+  width: 200px;
+  margin: auto;
+  display: none;
+}
+
+.phone-details .phone-detail-images {
+  margin: 0 auto;
+  display: block;
+}
+
+
+/*display phone-card style  */
+.phone-card{
+border: 3px solid rebeccapurple;
+margin-bottom: 10px;
+padding:10px;
+box-shadow: 0 0 10px #2c2c54;
+}
+.phone-card .display-phone-image{
+    max-width: 180px;
+    margin: 0 auto;
+}
+.phone-card span{
+    color: #eb4d4b;
+}
+.phone-card h5{
+    font-size: 16px;
+}
+.phone-card .search-detail-btn{
+background:transparent;
+border :0;
+border: 2px solid #40407a;
+padding: 8px 20px;
+border-radius: 30px;
+font-size: 15px;
+transition: .4s;
+}
+.phone-card .search-detail-btn:hover{
+    background: #40407a;
+    color: #fff;
+}
+

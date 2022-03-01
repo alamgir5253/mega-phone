@@ -28,13 +28,12 @@ const displayPhone = phones => {
         const div = document.createElement("div")
         div.classList.add("col-md-4")
         div.innerHTML = `
-        <div class="card" style="width: 18rem;">
-                    <img src="${phone.image}" class="card-img-top w-25" alt="...">
+        <div class="card phone-card" >
+                    <img src="${phone.image}" class="display-phone-image" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">brand: ${phone.brand}</h5>
-                      <h6 class="card-title">phone name: ${phone.phone_name}</h6>
-                      
-                      <button onclick="displayPhoneDetail('${phone.slug}')" class="btn btn-primary">see datail</button>
+                      <h5 class="card-title"><span>Brand:</span> ${phone.brand}</h5>
+                      <h5 class="card-title"><span>Phone-Name:</span> ${phone.phone_name}</h5>
+                      <button onclick="displayPhoneDetail('${phone.slug}')" class=" search-detail-btn">see datail</button>
                     </div>
                   </div>
         `
@@ -62,14 +61,14 @@ const showPhoneDetail = brand =>{
 PhoneDetail.innerHTML = ""
     const div = document.createElement("div")
     // div.classList.add("col")
-    div.classList.add("poone-details")
+    div.classList.add("phone-details")
     div.innerHTML = `
-    <div class="card" style="margin: 0 auto;">
+    <div class="card phone-card" >
                 <img src="${brand.image}" class="phone-detail-images card-img-top w-25" alt="...">
                 <div class="card-body">
                 <p>releaseDate: ${brand.releaseDate ? brand.releaseDate: 'comming soon...'}</p>
-                  <h5 class="card-title">brand: ${brand.brand}</h5>
-                  <h6 class="card-title">phone name: ${brand.name}</h6>
+                  <h4 class="card-title">brand: ${brand.brand}</h4>
+                  <h4 class="card-title">phone name: ${brand.name}</h4>
                   <p>displaySize: ${brand.mainFeatures.displaySize}</p>
                   <p>memory: ${brand.mainFeatures.memory}</p>
                   <p>storage: ${brand.mainFeatures.storage}</p>
