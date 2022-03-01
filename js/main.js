@@ -60,27 +60,25 @@ const showPhoneDetail = brand =>{
     const PhoneDetail = document.getElementById("phone-detail")
 PhoneDetail.innerHTML = ""
     const div = document.createElement("div")
-    // div.classList.add("col")
-    div.classList.add("phone-details")
     div.innerHTML = `
     <div class="card phone-card" >
                 <img src="${brand.image}" class="phone-detail-images card-img-top w-25" alt="...">
                 <div class="card-body">
-                <p>releaseDate: ${brand.releaseDate ? brand.releaseDate: 'comming soon...'}</p>
-                  <h4 class="card-title">brand: ${brand.brand}</h4>
-                  <h4 class="card-title">phone name: ${brand.name}</h4>
-                  <p>displaySize: ${brand.mainFeatures.displaySize}</p>
-                  <p>memory: ${brand.mainFeatures.memory}</p>
-                  <p>storage: ${brand.mainFeatures.storage}</p>
+                <p>releaseDate: <span>${brand.releaseDate ? brand.releaseDate: 'comming soon...'}</span</p>
+                  <p class="card-title">brand: <span>${brand.brand}</span</h4>
+                  <p class="card-title">phone name: <span>${brand.name}</span</h4>
+                  <p>displaySize: <span>${brand.mainFeatures.displaySize}</span</p>
+                  <p>memory: <span>${brand.mainFeatures.memory}</span</p>
+                  <p>storage: <span>${brand.mainFeatures.storage}</span</p>
                   <h4>sensor</h4>
-                  <p>${brand.mainFeatures.sensors}</p>
+                  <p><span>${brand.mainFeatures.sensors}</span</p>
                   <h4>others</h4>
-                  <p>Bluetooth: ${brand.others.Bluetooth}</p>
-                  <p>GPS: ${brand.others.GPS}</p>
-                  <p>NFC: ${brand.others.NFC}</p>
-                  <p>Radio: ${brand.others.Radio}</p>
-                  <p>USB: ${brand.others.USB}</p>
-                  <p>WLAN: ${brand.others.WLAN}</p>
+                  <p>Bluetooth: <span>${brand.others.Bluetooth}</span</p>
+                  <p>GPS: <span>${brand.others.GPS}</span</p>
+                  <p>NFC: <span>${brand.others.NFC}</span</p>
+                  <p>Radio: <span>${brand.others.Radio}</span</p>
+                  <p>USB: <span>${brand.others.USB}</span</p>
+                  <p>WLAN: <span>${brand.others.WLAN}</span</p>
 
                   
 

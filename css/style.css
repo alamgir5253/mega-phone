@@ -4,11 +4,14 @@
     box-sizing: border-box;
 }
 /* google font  */
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Noto+Serif+Display:wght@600&family=Oswald:wght@500&family=Shizuru&display=swap');
+/* google font famely  */
+/* font-family: 'Karla', sans-serif;
+font-family: 'Noto Serif Display', serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Shizuru', cursive; */
 .site-title{
-    font-family: 'Noto Serif Display', serif;
+    font-family: 'Shizuru', cursive;
     border-radius: 50px;
     background: #2c2c54;
     color:#fff;
@@ -57,15 +60,10 @@ transition: .3s;
   width: 200px;
   margin: auto;
   display: none;
+  
 }
 
-.phone-details .phone-detail-images {
-  margin: 0 auto;
-  display: block;
-}
-
-
-/*display phone-card style  */
+/*display phone-card style start */
 .phone-card{
 border: 3px solid rebeccapurple;
 margin-bottom: 10px;
@@ -78,9 +76,13 @@ box-shadow: 0 0 10px #2c2c54;
 }
 .phone-card span{
     color: #eb4d4b;
+    font-family: 'Shizuru', cursive;
 }
 .phone-card h5{
     font-size: 16px;
+    color:#40407a;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
 }
 .phone-card .search-detail-btn{
 background:transparent;
@@ -94,5 +96,28 @@ transition: .4s;
 .phone-card .search-detail-btn:hover{
     background: #40407a;
     color: #fff;
+}
+
+/* show phone details css start */
+.phone-card .phone-detail-images {
+    margin: 0 auto;
+  }
+.phone-card h4{
+    color: #eb4d4b;
+    font-size: 30px;
+}
+.phone-card p{
+    color: #eb4d4b;
+    font-size: 20px;
+    font-weight: bold;
+}
+.phone-card h4 span{
+    color: #40407a;
+    font-size: 15px;
+}
+.phone-card p span{
+    color: #40407a;
+    font-size: 15px;
+    font-family: 'Shizuru', cursive;
 }
 
